@@ -71,28 +71,19 @@ The system provides:
 
 ### Home Page
 
-```markdown
 ![Home Page](images/home.png)
-```
 
 ### Dataset Overview
 
-```markdown
 ![Dataset Overview](images/dataset_overview.png)
-```
 
 ### Prediction System
 
-```markdown
 ![Prediction](images/prediction.png)
-```
 
 ### Prediction Confidence
 
-```markdown
 ![Prediction Confidence](images/prediction_confidence.png)
-```
-
 ---
 
 ## 🛠️ Technologies Used
