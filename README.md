@@ -90,7 +90,7 @@ The system provides:
 ### Prediction Confidence
 
 ```markdown
-![Prediction Confidence](https://github.com/Vishal123-tech/Diabetes-Classification-ML/blob/main/preview%20.png)
+![Prediction Confidence](images/prediction_confidence.png)
 ```
 
 ---
