@@ -1,80 +1,172 @@
-# Diabetes Classification
+# 🩺 Diabetes Prediction System using Machine Learning
 
-This project focuses on analyzing the [Pima Indians Diabetes](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database) dataset through Exploratory Data Analysis (EDA), feature engineering, and machine learning model building to predict diabetes occurrence. The goal is to build an accurate prediction model by handling missing values, detecting and handling outliers, extracting relevant features, and visualizing data insights. Various machine learning models are trained and evaluated to determine the best-performing algorithm.
+An end-to-end Machine Learning and Data Analytics project built on the Pima Indians Diabetes Dataset. This project combines Exploratory Data Analysis (EDA), Feature Engineering, Machine Learning, and an Interactive Streamlit Web Application to predict diabetes risk in real time.
 
-## **Table of Contents**
-* About the Dataset
-* Project Overview
-* How to Run
-* Summary
+---
 
-## **How to Run**
+## 🚀 Live Application Features
+
+### 🏠 Home Page
+
+* Project overview and introduction
+* Key application features
+* Interactive user interface
+
+### 📊 Dataset Overview
+
+* Dataset preview
+* Statistical summary
+* Feature descriptions
+* Data exploration insights
+
+### 📈 EDA Dashboard
+
+* Missing value analysis
+* Outlier detection
+* Correlation analysis
+* Feature engineering insights
+
+### 📉 Visualizations
+
+* Feature distributions
+* Diabetes outcome analysis
+* Correlation heatmaps
+* Interactive charts and plots
+
+### 🤖 Diabetes Prediction
+
+Users can enter:
+
+* Pregnancies
+* Glucose
+* Blood Pressure
+* Skin Thickness
+* Insulin
+* BMI
+* Diabetes Pedigree Function
+* Age
+
+The system provides:
+
+✅ Diabetes Risk Prediction
+✅ Probability Score
+✅ Risk Classification
+✅ Prediction Confidence Visualization
+
+### 📋 Model Performance
+
+* Accuracy comparison of multiple ML models
+* Hyperparameter tuning results
+* Performance metrics evaluation
+
+### ℹ️ About
+
+* Project details
+* Technologies used
+* Development information
+
+---
+
+## 📸 Application Screenshots
+
+### Home Page
+
+![Home Page](images/home.png)
+
+### Dataset Overview
+
+![Dataset Overview](images/dataset_overview.png)
+
+### Prediction System
+
+![Prediction](images/prediction.png)
+
+### Prediction Confidence
+
+![Prediction Confidence](images/prediction_confidence.png)
+---
+
+## 🛠️ Technologies Used
+
+### Programming & Analytics
+
+* Python
+* Pandas
+* NumPy
+
+### Data Visualization
+
+* Matplotlib
+* Seaborn
+* Plotly
+
+### Machine Learning
+
+* Scikit-Learn
+* XGBoost
+* LightGBM
+
+### Web Application
+
+* Streamlit
+
+### Development Tools
+
+* Jupyter Notebook
+* Git
+* GitHub
+
+---
+
+## 📊 Machine Learning Models Evaluated
+
+| Model               | Accuracy   |
+| ------------------- | ---------- |
+| Logistic Regression | 87.31%     |
+| KNN                 | 86.16%     |
+| CART                | 86.15%     |
+| Random Forest       | 88.28%     |
+| GBM                 | 88.93%     |
+| XGBoost             | 89.74%     |
+| LightGBM            | **90.07%** |
+
+---
+
+## 🎯 Key Achievements
+
+* Built an end-to-end ML pipeline.
+* Performed feature engineering and data preprocessing.
+* Improved baseline performance significantly.
+* Developed a complete Streamlit dashboard.
+* Implemented real-time diabetes prediction.
+* Added probability-based confidence visualization.
+* Compared and optimized multiple machine learning models.
+
+---
+
+## ▶️ Run Locally
+
 ```bash
-# 1. Install dependencies
 pip install -r requirements.txt
-
-# 2. Launch the Streamlit app
 streamlit run app.py
 ```
-The app loads the trained model (`diabetes_model.pkl`), the scaler (`scaler.pkl`),
-and the dataset (`data/diabetes.csv`), and provides interactive EDA, visualizations,
-and live diabetes-risk prediction.
 
-## **About the Dataset**
-The **Pima Indians Diabetes dataset** contains 768 observations of medical records for women aged 21 years and above. The outcome variable (Outcome) indicates whether a patient has diabetes (1) or not (0). The dataset includes the following features:
+---
 
-* **Pregnancies:** Number of pregnancies
-* **Glucose:** Plasma glucose concentration after a 2-hour oral glucose tolerance test
-* **BloodPressure:** Diastolic blood pressure (mm Hg)
-* **SkinThickness:** Triceps skinfold thickness (mm)
-* **Insulin:** 2-Hour serum insulin (mu U/ml)
-* **BMI:** Body mass index (weight in kg/(height in m)^2)
-* **DiabetesPedigreeFunction:** A score representing the likelihood of diabetes based on family history
-* **Age:** Age in years
-* **Target variable:** Outcome 1 indicates having diabetes; 0 indicates not having diabetes. 
+## 📄 Dataset
 
-## **Project Overview**
-The project is divided into the following sections:
+Pima Indians Diabetes Dataset
 
-### **A. EDA** 
-* **Missing Value Handling:** Identify and impute missing values in critical features like Insulin and SkinThickness.
-* **Outlier Detection & Handling:** Use statistical methods to detect and handle outliers for better model accuracy.
-* **Correlation Analysis:** Analyze feature correlations to understand their relationships with the target variable.
-* **Feature Extraction:** Create new features (e.g., BMI categories, Age bins) to improve model interpretability and predictive performance.
+Source:
+https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database
 
-### **B. Visualization**
-* **Outliers:** Visualize outliers before and after handling them.
-* **Distribution Plots:** Analyze the distribution of key features to understand their spread and variability.
-* **Diabetes Ratio:** Visualize the ratio of diabetes occurrences within the dataset.
-* **Visualization of Extracted Features:** Visualize newly engineered features and their contribution to the model.
+---
 
-### **C. Machine Learning**
-* Build various machine learning models such as Logistic Regression, Decision Trees, Random Forest, and XGBoost to predict diabetes.
-* Perform hyperparameter tuning to optimize model performance.
+## 👨‍💻 Author
 
-### **D. Model Performance**
-* Evaluate model performance using metrics such as accuracy, precision, recall, and AUC-ROC.
-* Compare the effectiveness of different models and identify the best-performing one.
+Vishal Yadav
 
-### **E. Conclusion**
-* Summarize the key insights and model performance.
-* Provide recommendations for further improvements and next steps.
-| Algorithm | Baseline Accuracy <br>Without Data Preprocess | Baseline Accuracy  <br>With Data Preprocess | Optimization
-|  :---: | :---: |  :---: | :---:
-| LR | 0.7671 | 0.8731 | - |
-| KNN | 0.7182 | 0.8535 | 0.8616 |
-| CART | 0.7312 | 0.8354 | 0.8615 |
-| RF | 0.7752 | 0.8893 | 0.8828|
-| GBM | 0.7638 | 0.8893 | -  |
-| XGBoost | 0.7508 | 0.8909 | 0.8974 |
-| LightGBM | 0.7378 | 0.8925 | 0.9007 |
+Data Analytics | Machine Learning | Business Intelligence
 
-
-## **Summary** 
-This project provides an end-to-end approach to analyzing and modeling the Diabetes dataset:
-
-* **Key Features:** Features such as Glucose, Insulin, and BMI play a significant role in predicting diabetes.
-* **Model Performance:** LightGBM achieved the highest accuracy in the notebook experiments after hyperparameter tuning.
-* **Deployed Model:** The Streamlit app (`app.py`) serves a **Random Forest** classifier trained on the 8 raw features (`diabetes_model.pkl` + `scaler.pkl`).
-
-By following a structured workflow from data cleaning to model evaluation, this project highlights best practices in feature engineering, visualization, and machine learning.
+GitHub:
+https://github.com/Vishal123-tech
